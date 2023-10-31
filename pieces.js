@@ -10,7 +10,7 @@ nomElement.innerText = article1.nom
 const prixElement = document.createElement("p")
 prixElement.innerText = `Prix : ${article1.prix}€` 
 const categorieElement = document.createElement("p")
-categorieElement = article1.categorie ?? "Pas de catégorie" 
+categorieElement.innerText = article1.categorie ?? "Pas de catégorie" 
 console.log("salut")
 
 const sectionFiches = document.querySelector(".fiches")
