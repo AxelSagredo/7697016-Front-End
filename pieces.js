@@ -1,4 +1,4 @@
-const response = await fetch("pieces-auto.json")
+const response = await fetch("pieces-autos.json")
 const pieces = await response.json()
 console.log("hey")
 
