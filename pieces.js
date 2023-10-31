@@ -1,21 +1,33 @@
 const response = await fetch("pieces-autos.json")
 const pieces = await response.json()
-console.log("hey")
 
 const article1 = pieces[0]
-const imageElement = document.createElement("img")
+var imageElement = document.createElement("img")
 imageElement.src = article1.image
-const nomElement = document.createElement("h2")
+var nomElement = document.createElement("h2")
 nomElement.innerText = article1.nom
-const prixElement = document.createElement("p")
+var prixElement = document.createElement("p")
 prixElement.innerText = `Prix : ${article1.prix}€` 
-const categorieElement = document.createElement("p")
+var categorieElement = document.createElement("p")
 categorieElement.innerText = article1.categorie ?? "Pas de catégorie" 
-console.log("salut")
 
-const sectionFiches = document.querySelector(".fiches")
+var sectionFiches = document.querySelector(".fiches")
 sectionFiches.appendChild(imageElement)
 sectionFiches.appendChild(nomElement)
 sectionFiches.appendChild(prixElement)
 sectionFiches.appendChild(categorieElement)
-console.log("coucou")
+
+const article2 = pieces[1]
+imageElement = document.createElement("img")
+imageElement.src = article1.image
+nomElement = document.createElement("h2")
+nomElement.innerText = article1.nom
+prixElement = document.createElement("p")
+prixElement.innerText = `Prix : ${article1.prix}€` 
+categorieElement = document.createElement("p")
+categorieElement.innerText = article1.categorie ?? "Pas de catégorie" 
+
+sectionFiches.appendChild(imageElement)
+sectionFiches.appendChild(nomElement)
+sectionFiches.appendChild(prixElement)
+sectionFiches.appendChild(categorieElement)
