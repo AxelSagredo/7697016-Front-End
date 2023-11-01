@@ -3,7 +3,7 @@ const pieces = await response.json()
 const sectionFiches = document.querySelector(".fiches")
 
 for (var i = 0; i < pieces.length ; i++) {
-    const pieceElement = document.appendChild("article")
+    const pieceElement = document.createElement("article")
     const imageElement = document.createElement("img")
     imageElement.src = pieces[i].image
     const nomElement = document.createElement("h2")
